@@ -3,6 +3,7 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: rgb(181, 0, 20);
+  padding: 1rem;
 }
 nav ul {
   list-style: none;
@@ -24,6 +25,7 @@ nav li a:hover {
 
 body {
   margin: 0;
+  font-family: "Roboto";
 }
 
 .row {
@@ -38,7 +40,7 @@ body {
 }
 
 .rightMargin {
-  padding-right: 18.5rem;
+  padding-right: 18rem;
 }
 
 .blackBg {
@@ -49,4 +51,15 @@ body {
 .imageBackground {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  size: cover;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(181, 0, 20);
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
