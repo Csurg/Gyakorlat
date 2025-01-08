@@ -4,6 +4,7 @@ nav {
   align-items: center;
   background-color: rgb(181, 0, 20);
   padding: 1rem;
+  z-index: 0;
 }
 nav ul {
   list-style: none;
@@ -28,19 +29,31 @@ body {
   font-family: "Roboto";
 }
 
-.row {
+.logo {
+  position: absolute;
+  top: 1vh;
+  left: 5vw;
+  z-index: 1;
+}
+
+.subnav {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: right;
   align-items: center;
 }
-.row p {
+.subnav p {
   margin: 0.5rem;
 }
 
 .rightMargin {
   padding-right: 18rem;
+}
+
+.rightText {
+  text-align: right;
+  color: white;
 }
 
 .blackBg {
@@ -49,10 +62,49 @@ body {
 }
 
 .imageBackground {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+.imageBackground img {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: -1;
+}
+.imageBackground .flex-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  size: cover;
+  position: absolute; /* Ensure it's on top of the image */
+  top: 0;
+  left: 0;
+  right: 0; /* Stretch to the full width of the container */
+  bottom: 0; /* Stretch to the full height of the container */
+  z-index: 1; /* Ensure it stays on top of the image */
+}
+.imageBackground .flex-container div {
+  width: 33%;
+}
+.imageBackground .flex-container div:nth-child(1) {
+  height: 25%;
+}
+.imageBackground .flex-container div:nth-child(2) {
+  height: 50%;
+  position: relative;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.imageBackground .flex-container div:nth-child(2) .inner-container {
+  position: absolute; /* Position absolutely within the parent div */
+  top: 0;
+  right: 0; /* Align to the right */
+  width: 50%;
+  text-align: left;
+}
+.imageBackground .flex-container div:nth-child(3) {
+  height: 25%;
 }
 
 footer {
@@ -62,4 +114,25 @@ footer {
   justify-content: space-around;
   background-color: rgb(181, 0, 20);
   color: #fff;
+  padding: 15px;
+}
+footer p {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.lastRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(102, 0, 11);
+  color: #fff;
+}
+.lastRow p {
+  margin: 0.5rem;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */
