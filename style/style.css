@@ -27,6 +27,7 @@ nav li a:hover {
 body {
   margin: 0;
   font-family: "Roboto";
+  color: #fff;
 }
 
 .logo {
@@ -53,12 +54,18 @@ body {
 
 .rightText {
   text-align: right;
-  color: white;
 }
 
 .blackBg {
   background-color: rgb(37, 37, 37);
-  color: #ffffff;
+}
+
+.blackBg2 {
+  background-color: rgb(14, 14, 14);
+}
+
+.redBg {
+  background-color: rgb(166, 33, 32);
 }
 
 .imageBackground {
@@ -105,6 +112,96 @@ body {
 }
 .imageBackground .flex-container div:nth-child(3) {
   height: 25%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.redButton {
+  padding: 15px 50px;
+  border-radius: 25px;
+  margin-right: 10px;
+  color: #fff;
+  border: 1px solid;
+  background-color: rgb(166, 33, 32);
+  border-color: #fff;
+}
+
+.whiteButton {
+  padding: 15px 50px;
+  border-radius: 25px;
+  margin-right: 10px;
+  color: #fff;
+  border: 1px solid;
+  background-color: #fff;
+  color: #000;
+  border-color: #ff0000;
+  margin-top: 10px;
+}
+
+.bg-image {
+  max-width: 100%;
+}
+
+.section {
+  height: 100vh;
+}
+
+.half-section {
+  height: 80vh;
+  display: flex;
+  width: 100%;
+}
+.half-section .left {
+  align-items: right;
+  width: 50%;
+}
+.half-section .right {
+  align-items: left;
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.noBottomMargin {
+  margin-bottom: 0;
+}
+
+.noTopMargin {
+  margin-top: 0;
+}
+
+.first-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 40vh;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+}
+
+.second-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 10vh;
+  margin-right: 40vh;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+}
+
+.third-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 40vh;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+  line-height: 1.5;
 }
 
 footer {
