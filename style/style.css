@@ -157,22 +157,31 @@ body {
   margin-bottom: 10vh;
 }
 
+button {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
 .redButton {
+  display: block;
   padding: 15px 50px;
   border-radius: 25px;
   margin-right: 10px;
   color: #fff;
   border: 1px solid;
+  z-index: 1;
   background-color: rgb(166, 33, 32);
   border-color: #fff;
 }
 
 .whiteButton {
+  display: block;
   padding: 15px 50px;
   border-radius: 25px;
   margin-right: 10px;
   color: #fff;
   border: 1px solid;
+  z-index: 1;
   background-color: #fff;
   color: #000;
   border-color: #ff0000;

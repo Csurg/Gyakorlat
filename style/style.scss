@@ -177,12 +177,19 @@ nav {
   margin-bottom: 10vh;
 }
 
+button{
+  cursor: pointer;
+  pointer-events: auto;
+}
+
 @mixin buttonBase {
+  display: block;
   padding: 15px 50px;
   border-radius: 25px;
   margin-right: 10px;
   color: #fff;
   border: 1px solid;
+  z-index: 1;
 }
 
 .redButton {
