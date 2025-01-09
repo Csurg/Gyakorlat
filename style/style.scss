@@ -84,7 +84,7 @@ nav {
 
   img {
       width: 100%;
-      height: auto; 
+      height: 100%; 
       display: block;
       position: relative;
       z-index: -1; 
@@ -141,12 +141,36 @@ nav {
 .center{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
   text-align: center;
+ 
+  margin-left: 30vh;
+  margin-right: 30vh;
   
+}
+
+.center2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 40vh;
   margin-left: 30vh;
   margin-right: 30vh;
 }
+
+.center3{
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  text-align: center;
+  justify-content: space-between;
+  margin-left: 30vh;
+  margin-right: 30vh;
+  
+}
+
 
 .top-bottom-margin{
   margin-top: 10vh;
@@ -175,18 +199,29 @@ nav {
   margin-top: 10px;
 }
 
-
+.zindex1{
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0; /* Stretch to the full width of the container */
+  bottom: 0; /* Stretch to the full height of the container */
+  z-index: 1;
+  
+}
 .bg-image{
   max-width: 100%; 
-  
+  z-index: -1;
 }
 
 .section{
   height: 100vh;
 }
+.section2{
+  height: 300vh;
+}
 
 .half-section{
-  height: 80vh;
+  
   display: flex;
   width: 100%;
 
@@ -197,10 +232,13 @@ nav {
   .right { 
     align-items: left;
     width: 50%; 
-    overflow: hidden;
-    display: flex; justify-content: center; align-items: center;
+   
   }
 
+}
+
+.col5{
+  display: flex;
 }
 
 .noBottomMargin{
