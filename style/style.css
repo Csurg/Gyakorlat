@@ -85,6 +85,19 @@ body {
   height: 100%;
   z-index: 1;
 }
+.imageBackground .swiper-pagination-bullet {
+  background: white;
+  width: 10px;
+  height: 10px;
+  opacity: 0.7;
+}
+.imageBackground .swiper-pagination-bullet-active {
+  background: red;
+}
+.imageBackground .swiper-button-next, .imageBackground .swiper-button-prev {
+  color: white;
+  font-size: 2rem;
+}
 .imageBackground .flex-container {
   display: flex;
   flex-direction: column;
