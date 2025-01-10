@@ -98,6 +98,20 @@ body {
   color: white;
   font-size: 2rem;
 }
+.imageBackground .image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.imageBackground .image-grid-item {
+  position: relative;
+  width: calc(33.33% - 10px);
+  box-sizing: border-box;
+}
+.imageBackground .image-grid-item img {
+  width: 100%;
+  height: auto;
+}
 .imageBackground .flex-container {
   display: flex;
   flex-direction: column;
@@ -137,6 +151,14 @@ body {
 }
 .row img {
   padding: 1rem;
+}
+
+.row2 {
+  display: flex;
+  flex-direction: row;
+}
+.row2 img {
+  margin-right: 1rem;
 }
 
 .center {
