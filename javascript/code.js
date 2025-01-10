@@ -1,24 +1,35 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Initialize Swiper
   var swiper = new Swiper('.swiper', {
-      // Optional parameters
       direction: 'horizontal',
       loop: true,
-
-      // If we need pagination
       pagination: {
           el: '.swiper-pagination',
           clickable: true,
       },
-
-      // Navigation arrows
       navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
       },
-
-      // And if we need scrollbar
       scrollbar: {
           el: '.swiper-scrollbar',
       },
+  });
+
+  // Initialize AOS
+  AOS.init();
+
+  // Initialize lightGallery
+  lightGallery(document.getElementById('lightgallery'), {
+      selector: '.gallery-item',
+      mode: 'lg-slide',
+      speed: 600,
+      closable: true,
+      loop: true,
+      escKey: true,
+      keyPress: true,
+      download: true,
+      counter: true,
+      enableDrag: true,
   });
 });
