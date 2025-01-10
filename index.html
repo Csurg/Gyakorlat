@@ -5,13 +5,9 @@
 <link href="style/style.css" rel="stylesheet">
 
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.2/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="javascript/code.js"></script>
 </head>
 <body>
     <div class="page">
@@ -84,7 +80,22 @@
             </div>
             <div class="right">
                 <div class="second-col">
-
+                    <div id="lightgallery" class="image-grid">
+                        <div class="image-grid-item gallery-item" data-src="images/galleryMain.png">
+                                <img src="images/galleryMain.png" alt="Main Image">
+                        </div>
+                        <div class="row2">
+                            <div class="image-grid-item gallery-item" data-src="images/gallery1.png">
+                                    <img src="images/gallery1.png" alt="Gallery Image 1">
+                            </div>
+                            <div class="image-grid-item gallery-item" data-src="images/gallery2.png">
+                                    <img src="images/gallery2.png" alt="Gallery Image 2">
+                            </div>
+                            <div class="image-grid-item gallery-item" data-src="images/gallery3.png">
+                                    <img src="images/gallery3.png" alt="Gallery Image 3">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -205,12 +216,17 @@
                     <img class="top-bottom-margin" src="images/vonal 1.png">
                 </div>
             </div>
+            
         </div>
     </div>
 
 
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.8.2/lightgallery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> 
-    <script> document.addEventListener("DOMContentLoaded", function() { AOS.init(); }); </script>
+    <script src="javascript/code.js"></script>
 </body>
 <footer>
     <div>
