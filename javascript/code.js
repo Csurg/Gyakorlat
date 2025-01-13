@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Initialize Swiper
-  var swiper = new Swiper('.swiper', {
+  var swiper = new Swiper('.swiper1', {
       direction: 'horizontal',
       loop: true,
       pagination: {
@@ -8,13 +8,49 @@ document.addEventListener('DOMContentLoaded', function () {
           clickable: true,
       },
       navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper1-button-next',
+          prevEl: '.swiper1-button-prev',
       },
-      scrollbar: {
-          el: '.swiper-scrollbar',
-      },
+      
   });
+
+  // Initialize Swiper Comment
+  var swiperComment = new Swiper(".swiper-comment", {
+    navigation: {
+      nextEl: ".swiper-comment-next",
+      prevEl: ".swiper-comment-prev",
+    },
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+   
+    slideToClickedSlide: true,
+    initialSlide: 1,
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
+
+
+  
 
   // Initialize AOS
   AOS.init();
@@ -33,3 +69,5 @@ document.addEventListener('DOMContentLoaded', function () {
       enableDrag: true,
   });
 });
+
+
