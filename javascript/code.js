@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Initialize Swiper Comment
   var swiperComment = new Swiper(".swiper-comment", {
+    effect: "coverflow",
     navigation: {
       nextEl: ".swiper-comment-next",
       prevEl: ".swiper-comment-prev",
