@@ -1,4 +1,16 @@
 @charset "UTF-8";
+:root {
+  --font-color: #fff;
+  --blackbg: rgb(37, 37, 37);
+  --blackbg2: rgb(14, 14, 14);
+}
+
+[data-theme=dark] {
+  --font-color: #000;
+  --blackbg: #fff;
+  --blackbg2: #fff;
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -28,7 +40,7 @@ nav li a:hover {
 body {
   margin: 0;
   font-family: "Roboto";
-  color: #fff;
+  color: var(--font-color);
 }
 
 .logo {
@@ -49,8 +61,77 @@ body {
   margin: 0.5rem;
 }
 
+.switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.switch input {
+  display: none;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+.theme-switch-wrapper p {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #000;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 .swiper1-button-next, .swiper1-button-prev, .swiper-comment-next, .swiper-comment-prev {
-  color: white !important;
+  color: var(--font-color) !important;
   font-size: 2rem !important;
 }
 
@@ -135,7 +216,7 @@ body {
 .popup-content {
   position: absolute;
   background-color: rgb(181, 0, 20);
-  border: 3px solid #fff;
+  border: 3px solid var(--font-color);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -173,11 +254,11 @@ body {
 }
 
 .blackBg {
-  background-color: rgb(37, 37, 37);
+  background-color: var(--blackbg);
 }
 
 .blackBg2 {
-  background-color: rgb(14, 14, 14);
+  background-color: var(--blackbg2);
 }
 
 .redBg {
@@ -202,7 +283,7 @@ body {
   z-index: 1;
 }
 .imageBackground .swiper-pagination-bullet {
-  background: white;
+  background: var(--font-color);
   width: 10px;
   height: 10px;
   opacity: 0.7;
@@ -318,11 +399,11 @@ button {
   padding: 15px 50px;
   border-radius: 25px;
   margin-right: 10px;
-  color: #fff;
+  color: var(--font-color);
   border: 1px solid;
   z-index: 1;
   background-color: rgb(166, 33, 32);
-  border-color: #fff;
+  border-color: var(--font-color);
 }
 
 .whiteButton {
@@ -330,7 +411,7 @@ button {
   padding: 15px 50px;
   border-radius: 25px;
   margin-right: 10px;
-  color: #fff;
+  color: var(--font-color);
   border: 1px solid;
   z-index: 1;
   background-color: #fff;
@@ -364,10 +445,6 @@ button {
 .half-section .right {
   align-items: left;
   width: 50%;
-}
-
-.col5 {
-  display: flex;
 }
 
 .noBottomMargin {
@@ -413,7 +490,7 @@ footer {
   align-items: center;
   justify-content: space-around;
   background-color: rgb(181, 0, 20);
-  color: #fff;
+  color: var(--font-color);
   padding: 15px;
 }
 footer p {
@@ -430,7 +507,7 @@ footer p {
   justify-content: space-around;
   align-items: center;
   background-color: rgb(102, 0, 11);
-  color: #fff;
+  color: var(--font-color);
 }
 .lastRow p {
   margin: 0.5rem;
