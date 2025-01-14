@@ -72,3 +72,35 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+let timeout;
+let popup = document.getElementById("popup");
+let closeBtn = document.getElementById("close-btn");
+let continueBtn = document.getElementById("continue-btn");
+
+// Check if popup has been shown before using localStorage
+/*if (!localStorage.getItem("popupShown")) {
+  window.addEventListener("scroll", function() {
+    clearTimeout(timeout);
+    timeout = setTimeout(showPopup, 10000);
+  });
+}*/
+
+window.addEventListener("scroll", function() {
+  clearTimeout(timeout);
+  timeout = setTimeout(showPopup, 10000);
+});
+
+function showPopup() {
+  popup.style.display = "block";
+  document.body.style.overflow = "hidden"; // Disable scrolling
+}
+
+closeBtn.addEventListener("click", closePopup);
+continueBtn.addEventListener("click", closePopup);
+
+function closePopup() {
+  popup.style.display = "none";
+  document.body.style.overflow = "auto"; // Enable scrolling again
+  localStorage.setItem("popupShown", "true"); // Set flag in localStorage to indicate popup has been shown
+}
+
