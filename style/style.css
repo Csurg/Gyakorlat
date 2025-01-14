@@ -1,3 +1,4 @@
+@charset "UTF-8";
 nav {
   display: flex;
   justify-content: center;
@@ -53,6 +54,12 @@ body {
   font-size: 2rem !important;
 }
 
+.swiper-slide {
+  display: flex;
+  justify-content: center; /* Center align content horizontally */
+  align-items: center; /* Center align content vertically */
+}
+
 .swiper-comment {
   width: 100% !important;
   padding-top: 50px !important;
@@ -77,6 +84,7 @@ body {
 
 .swiper-slide-active .comment-slide {
   opacity: 1 !important; /* Set opacity for the focused slide */
+  position: relative;
 }
 
 .comment-slide h3 {
@@ -94,6 +102,23 @@ body {
 
 .comment-slide .stars {
   margin-bottom: 10px;
+}
+
+.swiper-slide-active .comment-slide::after {
+  content: "”";
+  position: absolute;
+  bottom: -90px; /* Adjust vertical placement */
+  right: 10px; /* Adjust horizontal placement */
+  font-size: 120px;
+  color: red;
+  font-family: serif;
+  opacity: 1; /* Ensure it's visible only on the active slide */
+  z-index: 1;
+}
+
+.comment-slide::after {
+  opacity: 0; /* Ensure it only appears on the active slide */
+  transition: opacity 0.3s ease; /* Smooth transition effect */
 }
 
 .rightMargin {
