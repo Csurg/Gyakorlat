@@ -48,6 +48,54 @@ body {
   margin: 0.5rem;
 }
 
+.swiper1-button-next, .swiper1-button-prev, .swiper-comment-next, .swiper-comment-prev {
+  color: white !important;
+  font-size: 2rem !important;
+}
+
+.swiper-comment {
+  width: 100% !important;
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+  max-width: 1200px !important;
+  margin: auto !important;
+}
+
+.comment-slide {
+  background: #333 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  padding: 20px !important;
+  border-radius: 10px !important;
+  opacity: 0.5 !important; /* Set initial opacity for non-focused slides */
+  transition: opacity 0.3s ease !important;
+  width: 100% !important;
+}
+
+.swiper-slide-active .comment-slide {
+  opacity: 1 !important; /* Set opacity for the focused slide */
+}
+
+.comment-slide h3 {
+  margin: 10px 0;
+}
+
+.comment-slide p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.comment-slide .icon {
+  margin-bottom: 10px;
+}
+
+.comment-slide .stars {
+  margin-bottom: 10px;
+}
+
 .rightMargin {
   padding-right: 18rem;
 }
@@ -93,43 +141,6 @@ body {
 }
 .imageBackground .swiper-pagination-bullet-active {
   background: red;
-}
-.imageBackground .swiper1-button-next, .imageBackground .swiper1-button-prev, .imageBackground .swiper-comment-next, .imageBackground .swiper-comment-prev {
-  color: white;
-  font-size: 2rem;
-}
-.imageBackground .swiper-comment {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-.imageBackground .comment-slide {
-  background: #333;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  border-radius: 10px;
-  opacity: 0.5; /* Set initial opacity for non-focused slides */
-  transition: opacity 0.3s ease;
-}
-.imageBackground .swiper-slide-active .comment-slide {
-  opacity: 1; /* Set opacity for the focused slide */
-}
-.imageBackground .comment-slide h3 {
-  margin: 10px 0;
-}
-.imageBackground .comment-slide p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-.imageBackground .comment-slide .icon {
-  margin-bottom: 10px;
-}
-.imageBackground .comment-slide .stars {
-  margin-bottom: 10px;
 }
 .imageBackground .image-grid {
   display: flex;
@@ -272,14 +283,6 @@ button {
 .bg-image {
   max-width: 100%;
   z-index: -1;
-}
-
-.section {
-  height: 100vh;
-}
-
-.section2 {
-  height: 300vh;
 }
 
 .half-section {
