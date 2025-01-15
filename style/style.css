@@ -11,6 +11,14 @@
   --blackbg2: #fff;
 }
 
+.theme-image {
+  filter: invert(0);
+}
+
+[data-theme=dark] .theme-image {
+  filter: invert(1);
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -46,7 +54,7 @@ body {
 .logo {
   position: absolute;
   top: 1vh;
-  left: 5vw;
+  left: 1vw;
   z-index: 2;
 }
 
@@ -170,11 +178,13 @@ input:checked + .slider:before {
 
 .comment-slide h3 {
   margin: 10px 0;
+  color: #fff;
 }
 
 .comment-slide p {
   font-size: 16px;
   line-height: 1.5;
+  color: #fff;
 }
 
 .comment-slide .icon {
